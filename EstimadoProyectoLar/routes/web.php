@@ -17,37 +17,17 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'DetallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'DetallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'detallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'detallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'detallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'detallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles', 'detallesController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalles1', 'detalles1Controller');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detallesimplicados', 'detallesimplicadosController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalleimpli', 'detalleimpliController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalleimpli', 'detalleimpliController');
-});
-Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalleimpli', 'detalleimpliController');
+	Route::resource('cronograma', 'cronogramaController');
+	Route::resource('cronogramaactividades', 'cronogramaactividadesController');
 });
