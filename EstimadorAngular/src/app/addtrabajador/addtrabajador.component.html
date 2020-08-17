@@ -1,0 +1,51 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<div class="container">
+    <h4 style="text-align: center;">Agregar Trabajador</h4>
+</div>
+<div class="container">
+    <div class="form-group row">
+        <div class="col-md-3 col-sm-3 col-3">
+            <label>ID</label>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9">
+            <input [(ngModel)]='id' class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3 col-sm-3 col-3">
+            <label>Nombre Empleado</label>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9">
+            <input [(ngModel)]='nombre' class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3 col-sm-3 col-3">
+            <label>Area</label>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9">
+            <Select name="miselect" [(ngModel)]="area" class="form-control">
+                <option [value]="item" *ngFor="let item of comboarea">{{item}}</option>
+            </Select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4 col-sm-4 col-4">
+        </div>
+        <div class="col-md-2 col-sm-2 col-2">
+            <button (click)="agregar()" >
+                <i class="material-icons verde" title=" agregar insumo">library_add_check</i>
+            </button>
+        </div>
+        <div class="col-md-1 col-sm-1 col-1">
+        </div>
+        <div class="col-md-2 col-sm-2 col-2">
+            <button (click)="limpiar()" >
+                <i class="material-icons rojo" title=" agregar insumo">not_interested</i>
+            </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+        </div>
+    </div>
+</div>

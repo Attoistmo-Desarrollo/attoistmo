@@ -1,0 +1,41 @@
+  <div>
+    <h1><p style="text-align: center;"> Detalles de Proyecto </p></h1>
+  <div id="tabla">
+    <table align="center">
+    <p>Proyecto: &nbsp;&nbsp;&nbsp;&nbsp;
+    <select name="select">
+        <option value="value1" selected>Tienda</option> 
+        <option value="value2">Hospital</option>
+        <option value="value3">Ferreteria</option>
+    </select></p>
+    <br>
+
+    <!-- <table datatable class="table table-striped table-bordered"> -->
+      <table datatable="ng" *ngIf="detalle" [dtOptions]="detalle" class="row-border hover table-bordered">
+      <thead>
+        <tr>
+          <th align="center">ID de proyecto</th>
+          <th align="center">Nombre de proyecto</th>
+          <th align="center">Requerimientos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let d of detalle">
+          <td>{{d.idproyecto}}</td>
+          <td>{{d.nombreproyecto}}</td>
+          <td>{{d.requerimientos}}</td>
+        </tr>
+        <!-- <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left"><p>1.- Se necesita un sistema para registrar las ventas del día</p>
+                            <p>2.- Se necesita para vender por medio de internet</p>
+                            <p>3.- Se necesita regristrar los productos que se tienen en existencia</p>
+                            <p>4.- El sistema debe de ser de facil entendimiento</p>
+                            <p>5.- Se requiere un manual para explicar el sistema</p></td>
+        </tr> -->
+      </tbody>
+    </table>
+    </table>
+  </div>
+</div>

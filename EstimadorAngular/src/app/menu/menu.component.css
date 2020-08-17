@@ -1,0 +1,20 @@
+.barMenu{
+    background: #252830;
+    color: #ffffff;
+  }
+  .barMenu1{
+    height: 50px;
+    width: 50%;
+    border: #252830;
+    background: #252830;
+    color: #ffffff;
+    text-align: center;
+  }
+  .buttonMenu{
+    background: #252830;
+    color: white;
+  }
+  .nav{
+    background: #252830;
+    color: #ffffff;
+  }

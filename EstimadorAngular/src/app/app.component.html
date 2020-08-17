@@ -1,0 +1,5 @@
+<app-menu *ngIf="router.url != '/' && router.url != '/login' && router.url != '/recuperacion' && router.url != '/nuevacontrasenia'"></app-menu>
+
+<app-login *ngIf="router.url == '/' || router.url == '/login'"></app-login>
+<app-recuperacion *ngIf="router.url == '/recuperacion'"></app-recuperacion>
+<app-nueva-contrasenia *ngIf="router.url == '/nuevacontrasenia'"></app-nueva-contrasenia>

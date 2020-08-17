@@ -1,0 +1,115 @@
+  <div>
+    <h1><p style="text-align: center;"> Detalles de los Implicados </p></h1>
+  <div id="tabla">
+    <table align="center">
+    <p>Proyecto: &nbsp;&nbsp;&nbsp;&nbsp;
+    <select name="select">
+        <option value="value1" selected>Tienda</option> 
+        <option value="value2">Hospital</option>
+        <option value="value3">Ferreteria</option>
+    </select></p>
+    <br>
+
+      <!-- <table datatable class="table table-striped table-bordered"> -->
+      <table datatable="ng" *ngIf="detalleImpli" [dtOptions]="detalleImpli" class="row-border hover table-bordered">
+      <thead>
+        <tr>
+          <th align="center">ID de proyecto</th>
+          <th align="center">Nombre de proyecto</th>
+          <th align="center">Puesto</th>
+          <th align="center">Nombre de los implicados</th>
+          <th align="center">Tiempo Invertido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let di of detalleImpli">
+          <td>{{di.idproyecto}}</td>
+          <td>{{di.nombreproyecto}}</td>
+          <td>{{di.puesto}}</td>
+          <td>{{di.nombreimplicado}}</td>
+          <td>{{di.timeinv}}</td>
+        </tr>
+        <!-- <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Lider de proyecto</td>
+          <td align="left">Samuel Santillan</td>
+          <td align="left">60 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Analista</td>
+          <td align="left">Jorge Guzman</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Analista</td>
+          <td align="left">Omar Dante</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Analista</td>
+          <td align="left">Luis Gonzalez</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Desarrollador</td>
+          <td align="left">Francisco Ramirez</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Desarrollador</td>
+          <td align="left">Octavio Meraz</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Desarrollador</td>
+          <td align="left">Yeraldin Varela</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Desarrollador</td>
+          <td align="left">Felipe Rosas</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Desarrollador</td>
+          <td align="left">Enrique Yañez</td>
+          <td align="left">15 Hrs</td>
+        </tr>
+
+        <tr>
+          <td align="center">7384</td>
+          <td align="left">Punto de venta</td>
+          <td align="left">Desarrollador</td>
+          <td align="left">Alejandro Navarro</td>
+          <td align="left">15 Hrs</td>
+        </tr> -->
+      </tbody>
+    </table>
+    </table>
+  </div>
+</div>

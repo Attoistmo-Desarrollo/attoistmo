@@ -1,0 +1,160 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <br>
+      <br>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <h4 class="col-md-3">Insumo</h4>
+                    <a class="col-md-3" data-toggle="modal" data-target="#insumo">
+                        <i class="material-icons verde" title=" agregar insumo">add_circle</i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+            <table datatable class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre Insumo</th>
+                    <th scope="col">Tipo formato</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Operación</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let recorido of insumo">
+                    <th>{{recorido.nombre}}</th>
+                    <td>{{recorido.formato}}</td>
+                    <td>{{recorido.descripcion}}</td>
+                    <td class="col-md-2">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="" >
+                                    <i class="material-icons negro" title="enviar">visibility</i>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="" >
+                                    <i class="material-icons rojo" title="enviar">delete</i>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <a href="" >
+                                    <i class="material-icons anarillo" title="enviar">create</i>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <h4 class="col-md-3">Trabajador</h4>
+                <a class="col-md-3" data-toggle="modal" data-target="#trabajador" >
+                    <i class="material-icons verde" title="agregar trabajador">add_circle</i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div><!--datatable class="table table-bordered"-->
+        <table class="table table-hover" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Area</th>
+                <th scope="col">Operación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let recorido of trabajador">
+                <th scope="row">{{recorido.id}}</th>
+                <td>{{recorido.nombre}}</td>
+                <td>{{recorido.area}}</td>
+                <td class="col-md-2">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="" >
+                                <i class="material-icons negro" title="enviar">visibility</i>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="" >
+                                <i class="material-icons rojo" title="enviar">delete</i>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <a href="" >
+                                <i class="material-icons anarillo" title="enviar">create</i>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+</div>
+<div class="row">
+    <div class="col-md-10"></div>
+    <div>
+        <a class="col-md-3" >
+            <i (click)="agregar()"  class="material-icons md-48" title="enviar">send</i>
+        </a>
+    </div>
+</div>
+<!--<div>
+  <button (click)="agregarInsumo()" >insumo</button>
+  <button (click)="agregarTrabajador()" >trabajador</button>
+</div>-->
+<div>
+  <span>
+    {{idestimado | json}}
+  </span>
+</div>
+<!--Inicio Modal insumo-->
+<div class="modal fade" id="insumo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">agregar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-addinsumo
+          [guardarinsumo]="insumo"
+          (insumoschange)="refrescarinsumo($event)">
+        </app-addinsumo>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Fin Modal insumo-->
+<!--Inicio Modal Trabajador-->
+<div class="modal fade" id="trabajador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">agregar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-addtrabajador
+          [guardardato]="trabajador"
+          (trabajadorchange)="refrescar($event)">
+          </app-addtrabajador>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Fin Modal Trabajador-->
