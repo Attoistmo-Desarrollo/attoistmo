@@ -16,17 +16,8 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => ['web']], function () {
-	Route::resource('detalles', 'DetallesController');
-	Route::resource('detalles', 'DetallesController');
-	Route::resource('detalles', 'detallesController');
-	Route::resource('detalles', 'detallesController');
-	Route::resource('detalles', 'detallesController');
-	Route::resource('detalles', 'detallesController');
 	Route::resource('detalles', 'detallesController');
 	Route::resource('detalles1', 'detalles1Controller');
-	Route::resource('detallesimplicados', 'detallesimplicadosController');
-	Route::resource('detalleimpli', 'detalleimpliController');
-	Route::resource('detalleimpli', 'detalleimpliController');
 	Route::resource('detalleimpli', 'detalleimpliController');
 	Route::resource('cronograma', 'cronogramaController');
 	Route::resource('cronogramaactividades', 'cronogramaactividadesController');
