@@ -164,7 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Roland\Crud\CrudServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
-
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         /*
          * Package Service Providers...
          */

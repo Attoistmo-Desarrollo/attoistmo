@@ -44,13 +44,17 @@ class estimadorinsumosController extends Controller
      */
     public function store(Request $request)
     {
-        
-        estimadorinsumo::create($request->all());
-
-        Session::flash('message', 'estimadorinsumo added!');
-        Session::flash('status', 'success');
-
-        return redirect('estimadorinsumos');
+        $general = new estimadorinsumo;
+        $general->Fecha = $request->Fecha;
+        $general->nombre = $request->nombre;
+        $general->save();
+        $id = $general->id;
+        $estimadorinsumo = estimadorinsumo::findOrFail($id);
+        return $estimadorinsumo;
+        // estimadorinsumo::create($request->all());
+        // Session::flash('message', 'estimadorinsumo added!');
+        // Session::flash('status', 'success');
+        // return redirect('estimadorinsumos');
     }
 
     /**
