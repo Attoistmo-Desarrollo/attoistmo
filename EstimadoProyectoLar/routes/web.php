@@ -30,4 +30,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::resource('detalleimpli', 'detalleimpliController');
 	Route::resource('cronograma', 'cronogramaController');
 	Route::resource('cronogramaactividades', 'cronogramaactividadesController');
+	Route::resource('estimadorinsumos', 'estimadorinsumosController');
+	Route::resource('trabajadors', 'trabajadorsController');
+	Route::resource('insumos', 'insumosController');
 });
