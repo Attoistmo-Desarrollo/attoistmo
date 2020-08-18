@@ -33,8 +33,8 @@ class cronogramaController extends Controller
      */
     public function create()
     {
-        // return view('backEnd.cronograma.create');
-        return $cronograma;
+        return view('backEnd.cronograma.create');
+        //return $cronograma;
     }
 
     /**

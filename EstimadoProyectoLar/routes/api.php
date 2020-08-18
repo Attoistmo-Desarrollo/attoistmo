@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::group(['middleware' => ['cors']], function () {
+// Route::group(['middleware' => ['cors']], function () {
 	Route::resource('detalles', 'detallesController');
 	Route::resource('detalles1', 'detalles1Controller');
 	Route::resource('detalleimpli', 'detalleimpliController');
@@ -26,4 +26,4 @@ Route::group(['middleware' => ['cors']], function () {
 	Route::resource('estimadorinsumos', 'estimadorinsumosController');
 	Route::resource('trabajadors', 'trabajadorsController');
 	Route::resource('insumos', 'insumosController');
-});
+//});
