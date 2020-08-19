@@ -46,7 +46,6 @@ export class InsumoestimacionComponent implements OnInit {
         this.agregarInsumo();
         this.agregarTrabajador();
       }
-      this.direccionamiento();
     }, 500);
   }
   agregarInsumo() {
@@ -56,14 +55,6 @@ export class InsumoestimacionComponent implements OnInit {
   agregarTrabajador() {
     this.trabajadores.id_estimador = this.idestimado.id;
     this.service.crearTrabajador(this.trabajadores).subscribe((data: {}) => {console.log(data); this.validandoTrabajador = true; });
-  }
-  direccionamiento() {
-    if (this.validandoestimacion) {
-      alert('( ' + this.validandoestimacion + ' validacion estimacion ) \n' +
-      '( ' + this.validandoInsumo + ' insumo) \n' + '( ' + this.validandoTrabajador + ' insumo)');
-    } else {
-      alert('no se logro agregar los datos');
-    }
   }
 
 }

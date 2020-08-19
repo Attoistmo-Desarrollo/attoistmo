@@ -26,6 +26,7 @@ import { CalibracionUsuarioService } from "../app/calibracion-usuario/share/cali
 import { DetallesProyectoService } from "../app/detalles-proyecto/detalles-proyecto/share/detalles-proyecto.service";
 import { DetallesImplicadosService } from "../app/detalles-implicados/share/detalles-implicados.service";
 import { HttpClientModule } from "@angular/common/http";
+import { RegisterComponent } from './register/register.component';
 //*************************************************************************** */
 
 @NgModule({
@@ -43,7 +44,8 @@ import { HttpClientModule } from "@angular/common/http";
     NuevaContraseniaComponent,
     CalibracionComponent,
     CronogramaActividadesComponent,
-    MenuComponent
+    MenuComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@
     "datatables.net": "^1.10.21",
     "datatables.net-dt": "^1.10.21",
     "jquery": "^3.5.1",
+    "ngx-cookie-service": "^10.0.1",
     "rxjs": "~6.5.4",
     "sweetalert": "^2.1.2",
     "tslib": "^1.10.0",

@@ -12,6 +12,7 @@ import { DetallesImplicadosComponent } from './detalles-implicados/detalles-impl
 import { CalibracionUsuarioComponent } from './calibracion-usuario/calibracion-usuario.component';
 import { CalibracionComponent } from './calibracion/calibracion.component';
 import { CronogramaActividadesComponent } from './cronograma-actividades/cronograma-actividades.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,9 @@ const routes: Routes = [
   {path: 'detalles-implicados', component: DetallesImplicadosComponent},
   {path: 'calibracion-usuario', component: CalibracionUsuarioComponent},
   { path: 'calibracion', component: CalibracionComponent },
-  { path: 'cronogramaActividades', component: CronogramaActividadesComponent }];
+  { path: 'cronogramaActividades', component: CronogramaActividadesComponent },
+  { path: 'registro' , component: RegisterComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

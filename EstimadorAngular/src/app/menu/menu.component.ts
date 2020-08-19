@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../shared/user.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public userService: UserService, private route: Router) { }
 
   ngOnInit(): void {
+  }
+  cerrar() {
+    this.userService.deley();
+    this.route.navigate(['login']);
   }
 
 }
