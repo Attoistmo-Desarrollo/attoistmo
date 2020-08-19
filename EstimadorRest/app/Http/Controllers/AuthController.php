@@ -1,10 +1,10 @@
 <?php
-namespace  App\Http\Controllers;
 
+namespace App\Http\Controllers;
 use App\Http\Requests\RegisterAuthRequest;
 use App\User;
 use Illuminate\Http\Request;
-use JWTAuth;
+use  JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 class  AuthController extends  Controller {
     public  $loginAfterSignUp = true;
@@ -16,18 +16,15 @@ class  AuthController extends  Controller {
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->save();
-        $id = $user->id;
-        $usuaronew = User::findOrFail($id);
 
-        /*if ($this->loginAfterSignUp) {
+        if ($this->loginAfterSignUp) {
             return  $this->login($request);
         }
 
         return  response()->json([
             'status' => 'ok',
-            'data' => $usuaronew
-        ], 200);*/
-        return $usuaronew;
+            'data' => $user
+        ], 200);
     }
 
     public  function  login(Request  $request) {
