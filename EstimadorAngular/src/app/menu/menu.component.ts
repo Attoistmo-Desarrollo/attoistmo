@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   }
   cerrar() {
     this.userService.deley();
-    this.route.navigate(['login']);
+    // this.route.navigate(['login']);
   }
 
 }

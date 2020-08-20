@@ -20,8 +20,17 @@ export class RegisterComponent implements OnInit {
     const user = { name: this.nombre, surname: this.apellido, email: this.email, password: this.password};
     this.userService.register(user).subscribe(data => {
       // this.userService.setToken(data.token);
+      this.limpiar();
       this.route.navigate(['login']);
     });
+  }
+  limpiar() {
+    this.email = '';
+    this.password = '';
+    this.confirmPassword = '';
+    this.nombre = '';
+    this.apellido = '';
+
   }
   ngOnInit(): void {
   }
