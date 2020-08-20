@@ -9,7 +9,46 @@ span.circulo {
   width: 120px;
   font-size: 1px;
 }
-
+.marcarTodo{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.inpu1{
+  width: 32%;
+  height: 300px;
+  float: left;
+}
+.inpu2{
+  width: 65%;
+  margin-right: 3%;
+  height: 300px;
+  float: right;
+}
+.inpu1 p{
+  padding-bottom: 30px;
+  text-align: left;
+}
+.inpu2 input{
+  margin-bottom: 45px;
+  text-align: left;
+  width: 100%;
+}
+.inpu2 select{
+  width: 100%;
+  text-align: left;
+}
+.inpu3{
+  width: 69%;
+  height: 380px;
+  float: left;
+}
+.inpu4{
+  width: 29%;
+  height: 380px;
+  float: right;
+  padding-left: 5px;
+}
 .alertaProyecto {
   font-size: 20px;
 }

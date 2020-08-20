@@ -7,50 +7,50 @@
     <h1>Calibracion</h1>
   </div>
   <div class="row justify-content-center">
-    <div class="col-7">
-      <aside class="my-4 text-center">
-        <div class="row">
-          <div class="col-md-12">
+    <div class="inpu3">
+      <aside>
+        <!--div class="row"-->
+          <div class="marcarTodo" >
             <form action="calibracion.component.ts" method="GET">
-              <p>Id del proyecto: <input class="my-2" name="idProyecto" type="text" value="Ingrese el Id" size="40" />
-              </p><br />
-              <p>Proyecto: <input class="my-2" name="nombreProyecto" type="text" value="Ingrese el nombre del proyecto"
-                  size="45" /></p><br />
-
-              <p>Fases de desarrollo
-                <select style="width: 380px" name="fases">
+              <div class="inpu1">
+                <p>Id del proyecto: </p>
+                <p>Proyecto: </p>
+                <p>Fases de desarrollo</p>
+              </div>
+              <div class="inpu2">
+                <input name="idProyecto" type="text" value="Ingrese el Id"/>
+                <input name="nombreProyecto" type="text" value="Ingrese el nombre del proyecto"/>
+                <select name="fases">
                   <option selected value="0"> Elige una fase </option>
                   <option value="1">Analisis</option>
                   <option value="2">Diseño</option>
                   <option value="3">Desarrollo</option>
                   <option value="4">Pruebas</option>
                 </select>
-              </p>
+                </div>
 
               <div style="text-align: center;" class="my-4">
                 <input class="inpBut" type="reset" value="Limpiar">
               </div>
             </form>
           </div>
-        </div>
+        <!--/div-->
       </aside>
     </div>
 
-
-
-
-    <div class="col-2"></div>
-    <div style="border: solid black 3px; padding-right: 2px;" class="col-3 text-center">
-      <h3 style="font: bold;">Estado del proyecto</h3><br>
-      <h1>
-        <span class="circulo">1</span> <br><br>
-        <p class="alertaProyecto">El proyecto no se ha iniciado</p>
-      </h1>
-      <div style="text-align: center;" class="my-4">
-        <input class="inpBut" type="submit" value="Calibrar">
+    <div class="inpu4">
+      <div style="border: solid black 3px; padding-right: 2px; width: 100%;" class="text-center">
+        <h3 style="font: bold;">Estado del proyecto</h3><br>
+        <h1>
+          <span class="circulo">1</span> <br><br>
+          <p class="alertaProyecto">El proyecto no se ha iniciado</p>
+        </h1>
+        <div style="text-align: center;" class="my-4">
+          <input class="inpBut" type="submit" value="Calibrar">
+        </div>
       </div>
     </div>
-</div>
+  </div>
 </section>
 
 
