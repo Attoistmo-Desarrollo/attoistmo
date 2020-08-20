@@ -8,6 +8,7 @@ Agular *******************************
  npm install sweetalert --save
 modificar node_moduls/sweetAlert/typings/sweetalert.d.ts
  documentar la linea 4
+Instalar npm install ngx-cookie-service --save
 fin de Angular ***********************
 
 laravel ===========================================

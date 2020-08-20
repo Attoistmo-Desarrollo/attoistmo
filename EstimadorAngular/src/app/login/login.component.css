@@ -135,3 +135,6 @@ html {
   margin-left: 0;
 }
 
+.modal-content{
+  width: 80%;
+}
