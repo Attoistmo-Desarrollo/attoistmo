@@ -20,8 +20,13 @@ export class RegisterComponent implements OnInit {
     const user = { name: this.nombre, surname: this.apellido, email: this.email, password: this.password};
     this.userService.register(user).subscribe(data => {
       // this.userService.setToken(data.token);
+      if (data.status === 'ok') {
+        alert ('se Agrego el registro');
+      } else {
+        alert (data.status);
+      }
       this.limpiar();
-      this.route.navigate(['login']);
+      this.route.navigate(['']);
     });
   }
   limpiar() {

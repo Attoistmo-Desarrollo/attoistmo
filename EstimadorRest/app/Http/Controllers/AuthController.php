@@ -15,16 +15,24 @@ class  AuthController extends  Controller {
         $user->surname = $request->surname;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
-        $user->save();
 
-        if ($this->loginAfterSignUp) {
-            return  $this->login($request);
+        $validando = User::where('email', $user->email )->get();
+        if(!$validando->isEmpty()) {
+            return  response()->json([
+                'status' => 'el correo ya existe',
+                'data' => 'error'
+            ], 200); 
+        }else {
+            $user->save();
+            if ($this->loginAfterSignUp) {
+                return  $this->login($request);
+            }
+    
+            return  response()->json([
+                'status' => 'exito se agrego el usuario',
+                'data' => $user
+            ], 200);
         }
-
-        return  response()->json([
-            'status' => 'ok',
-            'data' => $user
-        ], 200);
     }
 
     public  function  login(Request  $request) {
