@@ -5,6 +5,24 @@
       <br>
       <div class="container">
         <div class="row">
+          <div class="col-8 row">
+            <div class="col-5">
+              <label>Nombre del proyecto</label>
+            </div>
+            <div class="col-7">
+              <input autofocus required class="form-control" [(ngModel)]='estimacion.nombre'>
+            </div>
+          </div>
+          <div class="col-4 row">
+            <div class="col-3">
+              <label>Fecha</label>
+            </div>
+            <div class="col-8">
+              <input required type="date" class="form-control" [(ngModel)]='estimacion.Fecha'>
+            </div>
+          </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <div class="row">
                     <h4 class="col-md-3">Insumo</h4>

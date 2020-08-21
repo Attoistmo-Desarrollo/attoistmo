@@ -34,8 +34,6 @@ export class InsumoestimacionComponent implements OnInit {
     console.log(this.insumos);
   }
   agregar() {
-    this.estimacion.nombre = 'prueba3';
-    this.estimacion.Fecha = '2020-08-07';
     this.service.create(this.estimacion).subscribe((data: {}) => {
       this.idestimado = data;
       console.log(this.idestimado);
@@ -50,11 +48,15 @@ export class InsumoestimacionComponent implements OnInit {
   }
   agregarInsumo() {
     this.insumos.id_estimador = this.idestimado.id;
-    this.service.crearInsumo(this.insumos).subscribe((data: {}) => { console.log(data); this.validandoInsumo = true; });
+    this.insumo.forEach(element => {
+      this.service.crearInsumo(this.insumos).subscribe((data: {}) => { console.log(data); this.validandoInsumo = true; });
+    });
   }
   agregarTrabajador() {
     this.trabajadores.id_estimador = this.idestimado.id;
-    this.service.crearTrabajador(this.trabajadores).subscribe((data: {}) => {console.log(data); this.validandoTrabajador = true; });
+    this.trabajador.forEach(element => {
+      this.service.crearTrabajador(this.trabajadores).subscribe((data: {}) => {console.log(data); this.validandoTrabajador = true; });
+    });
   }
 
 }

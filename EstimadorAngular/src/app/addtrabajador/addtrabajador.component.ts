@@ -14,10 +14,10 @@ export class AddtrabajadorComponent implements OnInit {
   comboarea = [];
 
   constructor() {
-    this.comboarea.push('analisis');
-    this.comboarea.push('desarrollo');
-    this.comboarea.push('diseño');
-    this.comboarea.push('prueba');
+    this.comboarea.push({valor: 'analisis'});
+    this.comboarea.push({valor: 'desarrollo'});
+    this.comboarea.push({valor: 'diseño'});
+    this.comboarea.push({valor: 'pruebas'});
   }
 
   ngOnInit(): void {
